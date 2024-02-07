@@ -1,7 +1,7 @@
 from flask import Flask, render_template, redirect, url_for, session, request, jsonify
-import prediction
+import src.predictor as p
 
-predictor = prediction.Predictor()
+predictor = p.Predictor()
 
 # Initialize Flask app
 app = Flask(__name__, static_url_path='/static')
@@ -14,9 +14,9 @@ def index():
 def predict():
     text = request.form['text']
     processed_text = text.lower()   
-    prediction = predictor.predict(processed_text)
+    prediction, confidence = predictor.predict(processed_text)
 
-    return render_template('index.html', text=prediction)
+    return render_template('index.html', result=prediction, confidence=confidence)
 
 if __name__ == '__main__':
     app.run(debug=True)
