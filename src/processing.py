@@ -22,6 +22,10 @@ class Processing:
         text = text.lower()
         # Expand contractions
         text = ' '.join([self.contractions.fix(word) for word in text.split()])
+        # replace the text with 'specie' if the text contains the species name
+        species = ['Javan Myna', 'Black-naped Oriole', 'Little Egret', 'Collared Kingfisher']
+        for specie in species:
+            text = text.replace(specie.lower(), 'specie')
         # Remove punctuation
         text = ''.join([char for char in text if char not in self.punctuation])
         # Tokenize the text
