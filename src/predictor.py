@@ -1,12 +1,11 @@
 import pickle
 
-# Load the model
-model = pickle.load(open('src/models/NB2_model.pkl','rb'))
-
-# Load the vectorizer
-vectorizer = pickle.load(open('src/models/NB2_vectorizer.pkl','rb'))
+# Load the model and vectorizer
+model = pickle.load(open('src/models/LR_model.pkl','rb'))
+vectorizer = pickle.load(open('src/models/LR_vectorizer.pkl','rb'))
 
 class Predictor:
+    
     def predict(self, text):
         # Vectorize the text
         text_vectorized = vectorizer.transform([text])

@@ -1,29 +1,59 @@
 <!DOCTYPE html>
-<html lang="en">
+<html>
+
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <link href="https://fonts.googleapis.com/css?family=Lilita+One&display=swap" rel="stylesheet" />
+    <link href="https://fonts.googleapis.com/css?family=Caveat+Brush&display=swap" rel="stylesheet" />
+    <link href="https://fonts.googleapis.com/css?family=Annie+Use+Your+Telescope&display=swap" rel="stylesheet" />
     <link rel="stylesheet" type="text/css" href="{{url_for('static',filename='styles/style.css')}}">
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <link rel="icon" type="image/x-icon" href="{{url_for('static',filename='images/logo.ico')}}">
+    <title>ChirpCheck - Bird Identification</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
 </head>
+
 <body>
-    <div class="row">
-        <div class="col-md-6 search-container">
-            <div>
-                <h1>Bird Detector</h1>
-                <form method="POST">
-                    <textarea name="text"></textarea>
-                    <br>
-                    <input type="submit">
-                </form>
-                <h3>{{ result }}</h3>
-                <p>{{ confidence }}</p>
+    <div class="container-fluid">
+        <div class="row" style="height: 100vh">
+            <div class="col search-container">
+                <div style="padding: 0px 30px;">
+                    <img src="{{url_for('static',filename='images/logo.png')}}" alt="logo" width="150px">
+                    <h1>ChirpCheck</h1>
+                    <span>Start by entering a description of a bird and we will try to identify it for you.</span>
+                    <form method="POST">
+                        <textarea name="text" placeholder="Enter Bird description"></textarea>
+                        <br>
+                        <input type="submit" value="Submit">
+                    </form>
+                </div>
             </div>
-        </div>
-        <div class="col-md-6">
-            <h1>hello</h1>
-        </div>
+            <div class="col result-container">
+                <div class="result-board">
+                    <div class="display-name">
+                        <img src="{{url_for('static',filename='images/1.jpg')}}" alt="">
+                        <div>
+                            <h3>@ {{ result }}</h3>
+                            <p>{{ confidence }}% Confidence</p>
+                            <button>Learn More ></button>
+                        </div>
+                    </div>
+                    <div class="bird-sound">
+                        <h3>Listen to me</h3>
+                        <audio controls>
+                            <source src="{{url_for('static',filename='audios/1.mp3')}}" type="audio/mpeg">
+                        </audio>
+                    </div>
+                    <div class="bird-info">
+                        <div class="bird-description">
+                            <h3>About me</h3>
+                            <p class="info">Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolores odit quis voluptas illum rerum possimus numquam officiis tempore eaque sint maiores consequatur enim, debitis aperiam deleniti, asperiores repellendus labore reiciendis!
+                        </div>
+                        <div class="bird-images">
+                            <img src="{{url_for('static',filename='images/1_2.jpg')}}" alt="">
+                        </div>
+                </div>
+            </div>
     </div>
 </body>
+
 </html>

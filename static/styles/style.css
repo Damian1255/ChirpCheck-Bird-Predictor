@@ -1,9 +1,187 @@
+* {
+  box-sizing: border-box;
+}
+
+body {
+  font-size: 14px;
+  margin: 0;
+  background-image: url("../images/bg.png");
+  background-size: cover;
+  background-repeat: no-repeat;
+}
 
 .search-container {
-    display: flex;
-    justify-content: center;
-    flex-direction: column;
-    align-items: center;
-    margin-top: 50px;
-    height: 500px;
+  text-align: center;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 20px 0;
+}
+
+.search-container img {
+  width: 160px;
+  height: 160px;
+}
+
+.search-container h1 {
+  font-family: Lilita One;
+  margin-bottom: 20px;
+}
+
+.search-container textarea {
+  width: 100%;
+  padding: 10px;
+  border-radius: 5px;
+  border: none;
+  background-color: #e6e6e6;
+  height: 160px;
+  resize: none;
+  border-radius: 25px;
+  padding: 10px 20px;
+  font-size: 18px;
+  margin: 20px 0px;
+  transition: all 0.3s ease;
+}
+
+.search-container textarea::placeholder {
+  font-family: Caveat Brush;
+  font-size: 18px;
+}
+
+.search-container textarea:focus {
+  background-color: #d9d9d9;
+  outline: none;
+  box-shadow: 0 0 10px 0 rgba(0, 0, 0, 0.5)
+}
+
+.search-container textarea:hover {
+  background-color: #d9d9d9;
+}
+
+.search-container input[type="submit"] {
+  padding: 10px 0px;
+  border-radius: 5px;
+  border: none;
+  background-color: #9A896D;
+  cursor: pointer;
+  border-radius: 25px;
+  margin: 10px 0;
+  width: 100%;
+  transition: all 0.3s ease;
+  color: white;
+  font-family: Caveat Brush;
+  font-size: 22px;
+}
+
+.search-container input[type="submit"]:hover {
+  background-color: #7d6b4d;
+}
+
+.result-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 20px 0;
+}
+
+.result-board {
+  padding: 30px;
+  background-color: white;
+  width: 550px;
+  border-radius: 25px;
+  box-shadow: 0 0 20px 0 rgba(0, 0, 0, 0.3);
+}
+
+.result-board .display-name img {
+  width: 120px;
+  height: 120px;
+  border-radius: 50%;
+}
+
+.result-board .display-name {
+  display: flex;
+}
+
+.result-board .display-name div {
+  display: flex;
+  margin-left: 30px;
+  flex-direction: column;
+  align-items: left;
+  place-content: center;
+}
+
+.result-board .display-name div h3 {
+  margin: 0;
+  padding: 0;
+  font-family: Caveat Brush;
+}
+
+.result-board .display-name div button {
+  padding: 5px 50px;
+  border-radius: 5px;
+  border: none;
+  background-color: #e6e6e6;
+  cursor: pointer;
+  border-radius: 25px;
+  transition: all 0.3s ease;
+  font-family: Annie Use Your Telescope;
+  font-weight: bold;
+  font-size: 22px;
+  letter-spacing: 2px;
+}
+
+.result-board .display-name div button:hover {
+  background-color: #cfcfcf;
+}
+
+.result-board .bird-sound {
+  display: flex;
+  border-radius: 10px;
+  justify-content: space-between;
+  align-items: center;
+  margin: 20px 0;
+  padding: 15px 20px;
+  background-color: gainsboro;
+  position: relative;
+}
+
+.result-board .bird-sound h3 {
+  margin: 0;
+  padding: 0;
+  font-family: Caveat Brush;
+}
+
+.result-board .bird-info{
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  margin: 20px 0;
+  margin-bottom: 0;
+}
+
+.result-board .bird-info .bird-description {
+  margin-right: 20px;
+}
+
+.result-board .bird-info h3 {
+  margin: 0;
+  padding: 0;
+  font-family: Caveat Brush;
+}
+
+.result-board .bird-info .info{
+  text-align: justify;
+}
+
+.result-board .bird-info img {
+  width: 100%;
+  border-radius: 5px;
+}
+
+/* Responsive */
+@media only screen and (max-width: 600px) {
+  body {
+    background-size: auto !important;
+  }
 }

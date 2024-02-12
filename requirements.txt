@@ -1,3 +1,5 @@
 Flask
+Pandas
 Gunicorn
+contractions
 Scikit-learn

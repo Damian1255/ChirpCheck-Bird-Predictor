@@ -19,7 +19,7 @@ def predict():
     processed_text = processor.preprocess_text(text)
     prediction, confidence = predictor.predict(processed_text)
 
-    return render_template('index.html', result=prediction, confidence=confidence)
+    return render_template('index.html', result=prediction, confidence=round(confidence, 2))
     
 if __name__ == '__main__':
     app.run(debug=True)
