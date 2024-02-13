@@ -215,11 +215,23 @@ body {
   width: 70%;
 }
 
+.credits {  
+  position: absolute;
+  bottom: 0;
+  right: 0;
+  padding: 0px 30px;
+  font-size: 14px;
+  color: gray;
+}
+
 /* Responsive */
 @media only screen and (max-width: 860px) {
   body {
     height: 100%;
     background-size: auto !important;
+  }
+  .credits {
+    position: relative;
   }
 }
 
