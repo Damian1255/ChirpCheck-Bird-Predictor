@@ -1,5 +1,8 @@
 Flask
 Pandas
+json
+matplotlib
+seaborn
 Gunicorn
 contractions
 Scikit-learn
