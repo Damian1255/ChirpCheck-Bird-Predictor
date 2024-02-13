@@ -10,14 +10,15 @@ submit_btn.addEventListener("click", function (event) {
     fader.style.opacity = 0;
     init.style.display = "none";
 
-    setTimeout(function () {
-        // Ajax call to fetch the data from the server
-        var xhr = new XMLHttpRequest();
-        xhr.open('POST', '/', true);
-        xhr.setRequestHeader('Content-Type', 'application/json');
 
-        xhr.onload = function () {
-            if (xhr.status === 200) {
+    // Ajax call to fetch the data from the server
+    var xhr = new XMLHttpRequest();
+    xhr.open('POST', '/', true);
+    xhr.setRequestHeader('Content-Type', 'application/json');
+
+    xhr.onload = function () {
+        if (xhr.status === 200) {
+            setTimeout(function () {
                 var response = JSON.parse(xhr.responseText);
                 if (response.success) {
                     commonName = response.result.commonName;
@@ -33,15 +34,18 @@ submit_btn.addEventListener("click", function (event) {
                     loader.style.display = "none";
                     fader.style.opacity = 1;
                 }
-            } else {
-                alert('An Internal error occurred.');
-            }
-        };
+            }, 700);
+        } else {
+            alert('An Internal error occurred.');
+            submit_btn.disabled = false;
+            loader.style.display = "none";
+            fader.style.opacity = 1;
+        }
+    };
 
-        xhr.send(JSON.stringify({
-            description: document.getElementById("description").value.trim()
-        }));
-    }, 700);
+    xhr.send(JSON.stringify({
+        description: document.getElementById("description").value.trim()
+    }));
 });
 
 // onload event
@@ -56,7 +60,7 @@ window.onload = function () {
 // oninput event
 document.getElementById("description").oninput = function () {
     description = document.getElementById("description").value.trim();
-    if (description.split(' ') == ""){
+    if (description.split(' ') == "") {
         msg.style.opacity = 0;
     } else if (description === "" || description === null || description.split(' ').length < 3) {
         submit_btn.disabled = true;
