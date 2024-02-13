@@ -14,13 +14,16 @@ def index():
 
 @app.route('/', methods=['POST'])
 def predict():
-    text = request.form['text']
-    # processed_text = text.lower()
-    processed_text = processor.preprocess_text(text)
-    prediction, confidence = predictor.predict(processed_text)
+    if request.method == 'POST':
+        text = request.json['description']
+        processed_text = processor.preprocess_text(text)
+        result = predictor.predict(processed_text)
 
-    return render_template('index.html', result=prediction, confidence=round(confidence, 2))
+        return jsonify({'success': True, 'result': result})
+    else:
+        return render_template('index.html')
     
+
 if __name__ == '__main__':
     app.run(debug=True)
 

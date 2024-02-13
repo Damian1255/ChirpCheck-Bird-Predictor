@@ -1,0 +1,46 @@
+{
+    "Javan Myna": {
+        "commonName": "Javan Myna",
+        "scientificName": "Acridotheres javanicus",
+        "description": "The Javan Myna is a common bird in Singapore. It is a noisy bird and is often seen in urban areas. It is an omnivorous bird and feeds on fruits, insects and small animals. It is a common sight to see them scavenging for food in the rubbish bins.",
+        "habitat": "Urban areas, parks and gardens.",
+        "conservationStatus": "Least Concern",
+        "imgName1": "javanMyna1.jpg",
+        "imgName2": "javanMyna2.jpg",
+        "audioName": "javanMyna.mp3",
+        "wikiLink": "https://en.wikipedia.org/wiki/Javan_myna"
+    },
+    "Little Egret": {
+        "commonName": "Little Egret",
+        "scientificName": "Egretta garzetta",
+        "description": "The Little Egret is a small white heron with a slender black bill and long black legs with yellow feet. It is a common bird in Singapore and is often seen in wetlands and coastal areas. It feeds on small fish, insects and small animals.",
+        "habitat": "Wetlands, coastal areas and mangroves.",
+        "conservationStatus": "Least Concern",
+        "imgName1": "littleEgret1.jpg",
+        "imgName2": "littleEgret2.jpg",
+        "audioName": "littleEgret.mp3",
+        "wikiLink": "https://en.wikipedia.org/wiki/Little_egret"
+    },
+    "Collared Kingfisher": {
+        "commonName": "Collared Kingfisher",
+        "scientificName": "Todiramphus chloris",
+        "description": "The Collared Kingfisher is a common bird in Singapore. It is a small bird with a large head and a long bill. It is often seen perching on trees and feeding on small animals. It is a noisy bird and is often heard calling in the early morning and late evening.",
+        "habitat": "Coastal areas, mangroves and parks.",
+        "conservationStatus": "Least Concern",
+        "imgName1": "collardKingfisher1.jpg",
+        "imgName2": "collardKingfisher2.jpg",
+        "audioName": "collardKingfisher.mp3",
+        "wikiLink": "https://en.wikipedia.org/wiki/Collared_kingfisher"
+    },
+    "Black-naped Oriole": {
+        "commonName": "Black-naped Oriole",
+        "scientificName": "Oriolus chinensis",
+        "description": "The Black-naped Oriole is a common bird in Singapore. It is a bright yellow bird with a black patch on its nape. It is often seen perching on trees and feeding on fruits and insects. It is a noisy bird and is often heard calling in the early morning and late evening.",
+        "habitat": "Urban areas, parks and gardens.",
+        "conservationStatus": "Least Concern",
+        "imgName1": "blackNapedOriole1.jpg",
+        "imgName2": "blackNapedOriole2.jpg",
+        "audioName": "blackNapedOriole.mp3",
+        "wikiLink": "https://en.wikipedia.org/wiki/Black-naped_oriole"
+    }
+}

@@ -2,14 +2,14 @@
 <html>
 
 <head>
+    <title>ChirpCheck - Bird Identification</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link href="https://fonts.googleapis.com/css?family=Lilita+One&display=swap" rel="stylesheet" />
     <link href="https://fonts.googleapis.com/css?family=Caveat+Brush&display=swap" rel="stylesheet" />
     <link href="https://fonts.googleapis.com/css?family=Annie+Use+Your+Telescope&display=swap" rel="stylesheet" />
     <link rel="stylesheet" type="text/css" href="{{url_for('static',filename='styles/style.css')}}">
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
     <link rel="icon" type="image/x-icon" href="{{url_for('static',filename='images/logo.ico')}}">
-    <title>ChirpCheck - Bird Identification</title>
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
 </head>
 
 <body>
@@ -19,41 +19,68 @@
                 <div style="padding: 0px 30px;">
                     <img src="{{url_for('static',filename='images/logo.png')}}" alt="logo" width="150px">
                     <h1>ChirpCheck</h1>
-                    <span>Start by entering a description of a bird and we will try to identify it for you.</span>
-                    <form method="POST">
-                        <textarea name="text" placeholder="Enter Bird description"></textarea>
+                    <p>Your bird identification assistant, powered by AI.</p>
+                    <form>
+                        <textarea name="text" placeholder="Enter Bird description (e.g. small bird with yellow body)"
+                            id="description"></textarea>
                         <br>
-                        <input type="submit" value="Submit">
+                        <input type="button" value="Identify Bird" id="submit_btn" disabled>
+                        <p id="message">-</p>
                     </form>
                 </div>
             </div>
             <div class="col result-container">
                 <div class="result-board">
-                    <div class="display-name">
-                        <img src="{{url_for('static',filename='images/1.jpg')}}" alt="">
-                        <div>
-                            <h3>@ {{ result }}</h3>
-                            <p>{{ confidence }}% Confidence</p>
-                            <button>Learn More ></button>
+                    <div id="fader">
+                        <div class="display-name">
+                            <img src="{{url_for('static',filename='images/placeholder.png')}}" alt="" id="bird-img1">
+                            <div>
+                                <h3 id="bird-name">-</h3>
+                                <p id="confidence">-% Confidence</p>
+                                <a href="" id="bird-wiki-link" target="_blank"><button>Learn More ></button></a>
+                            </div>
+                        </div>
+                        <div class="bird-sound">
+                            <h3>Listen to me</h3>
+                            <audio controls src="" type="audio/mpeg" id="bird-audio">
+                        </div>
+                        <div class="bird-info">
+                            <div class="bird-description">
+                                <h3>About me</h3>
+                                <p class="info" id="bird-description">-</p>
+                            </div>
+                            <div class="bird-images">
+                                <img src="{{url_for('static',filename='images/placeholder.png')}}" alt=""
+                                    id="bird-img2">
+                            </div>
                         </div>
                     </div>
-                    <div class="bird-sound">
-                        <h3>Listen to me</h3>
-                        <audio controls>
-                            <source src="{{url_for('static',filename='audios/1.mp3')}}" type="audio/mpeg">
-                        </audio>
+                </div>
+                <div id="loader">
+                    <div class="lds-grid">
+                        <div></div>
+                        <div></div>
+                        <div></div>
+                        <div></div>
+                        <div></div>
+                        <div></div>
+                        <div></div>
+                        <div></div>
+                        <div></div>
                     </div>
-                    <div class="bird-info">
-                        <div class="bird-description">
-                            <h3>About me</h3>
-                            <p class="info">Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolores odit quis voluptas illum rerum possimus numquam officiis tempore eaque sint maiores consequatur enim, debitis aperiam deleniti, asperiores repellendus labore reiciendis!
-                        </div>
-                        <div class="bird-images">
-                            <img src="{{url_for('static',filename='images/1_2.jpg')}}" alt="">
-                        </div>
+                </div>
+                <div id="init">
+                    <h1 style="font-family: Lilita One;">To get started,</h1>
+                    <span style="color: grey;">
+                        Enter a description of a bird in the text box and we will try to identify it for you.
+                        <br><br>
+                        <span style="color: black; font-weight: 500; font-size: 18px;">Here are some examples:</span>
+                        <br>"Small bird with yellow body",<br>"Bird with white body and long legs",<br>"Bird with blue and white feathers"
+                    </span>
                 </div>
             </div>
-    </div>
+        </div>
+        <script src="{{url_for('static',filename='scripts/main.js')}}"></script>
 </body>
 
 </html>
