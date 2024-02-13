@@ -5,3 +5,4 @@ seaborn
 Gunicorn
 contractions
 Scikit-learn
+nltk
