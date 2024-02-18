@@ -40,7 +40,7 @@ body {
   padding: 10px;
   border-radius: 5px;
   border: none;
-  background-color: #e6e6e6;
+  background-color: #f0f0f0;
   height: 160px;
   resize: none;
   border-radius: 25px;
@@ -246,6 +246,7 @@ body {
   }
   #init {
     width: 90%;
+    top: 20px;
   }
   .result-board .display-name {
     flex-direction: column;

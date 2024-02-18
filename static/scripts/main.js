@@ -9,7 +9,10 @@ submit_btn.addEventListener("click", function (event) {
     loader.style.display = "block";
     fader.style.opacity = 0;
     init.style.display = "none";
-
+    
+    if (window.innerWidth < 900) {
+        document.getElementById("loader").scrollIntoView({ behavior: "smooth" });
+    }
 
     // Ajax call to fetch the data from the server
     var xhr = new XMLHttpRequest();
@@ -48,7 +51,7 @@ submit_btn.addEventListener("click", function (event) {
     }));
 });
 
-// onload event
+// onload event for the window
 window.onload = function () {
     description = document.getElementById("description").value.trim();
     document.getElementById("description").focus();
@@ -57,7 +60,7 @@ window.onload = function () {
     }
 };
 
-// oninput event
+// Oninput event for the description input
 document.getElementById("description").oninput = function () {
     description = document.getElementById("description").value.trim();
     if (description.split(' ') == "") {
@@ -73,6 +76,7 @@ document.getElementById("description").oninput = function () {
     }
 };
 
+// Function to update the display
 function update_display(name, description, imgName1, imgName2, audioName, wikiLink, confidence) {
     document.getElementById("bird-name").innerHTML = name;
     document.getElementById("bird-description").innerHTML = description;
