@@ -247,6 +247,24 @@ body {
   #init {
     width: 90%;
   }
+  .result-board .display-name {
+    flex-direction: column;
+    align-items: center;
+  }
+  .result-board .bird-info {
+    flex-direction: column;
+  }
+  .result-board .bird-info .bird-description {
+    margin-right: 0;
+  }
+  .result-board .bird-info img {
+    width: 100%;
+    margin-bottom: 10px;
+  }
+  .result-board .display-name div {
+    margin-left: 0px;
+    text-align: center;
+  }
 }
 
 /* Loader */
