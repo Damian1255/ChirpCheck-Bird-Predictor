@@ -1,9 +1,9 @@
 from flask import Flask, render_template, redirect, url_for, session, request, jsonify
 import src.predictor as predictor
-import src.processing as processing
+import src.processor as processor
 
 predictor = predictor.Predictor()
-processor = processing.Processing()
+processor = processor.Processing()
 
 # Initialize Flask app
 app = Flask(__name__, static_url_path='/static')

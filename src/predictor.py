@@ -4,8 +4,8 @@ import json
 class Predictor:
     def __init__(self):
         # Load the model and vectorizer
-        self.model = pickle.load(open('src/models/LR_model.pkl','rb'))
-        self.vectorizer = pickle.load(open('src/models/LR_vectorizer.pkl','rb'))
+        self.model = pickle.load(open('src/models/model.pkl','rb'))
+        self.vectorizer = pickle.load(open('src/models/vectorizer.pkl','rb'))
 
         # Load the bird information
         with open('static/bird_info.json') as f:

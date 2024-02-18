@@ -219,7 +219,7 @@ body {
   position: absolute;
   bottom: 0;
   right: 0;
-  padding: 0px 30px;
+  padding: 0px 40px;
   font-size: 14px;
   color: gray;
 }
@@ -232,6 +232,20 @@ body {
   }
   .credits {
     position: relative;
+  }
+  .result-board .bird-info .info {
+    width: 100%;
+  }
+  .result-board {
+    width: 100%;
+  }
+  .credits {
+    width: 100%;
+    text-align: center;
+    padding-bottom: 20px;
+  }
+  #init {
+    width: 90%;
   }
 }
 
