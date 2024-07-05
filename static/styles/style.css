@@ -107,7 +107,7 @@ body {
 .result-board {
   padding: 30px;
   background-color: white;
-  width: 550px;
+  width: 80%;
   border-radius: 25px;
   box-shadow: 0 0 20px 0 rgba(0, 0, 0, 0.3);
 }
@@ -192,7 +192,7 @@ body {
 
 .result-board .bird-info .info {
   text-align: justify;
-  width: 300px;
+  width: 100%;
   height: 180px;
   margin-bottom: 0;
   overflow-y: auto;
@@ -236,16 +236,12 @@ body {
   .result-board .bird-info .info {
     width: 100%;
   }
-  .result-board {
-    width: 100%;
-  }
   .credits {
     width: 100%;
     text-align: center;
     padding-bottom: 20px;
   }
   #init {
-    width: 90%;
     top: 20px;
   }
   .result-board .display-name {
@@ -265,6 +261,15 @@ body {
   .result-board .display-name div {
     margin-left: 0px;
     text-align: center;
+  }
+}
+
+@media only screen and (max-width: 500px) {
+  .result-board {
+    width: 100%;
+  }
+  #init {
+    width: 90%;
   }
 }
 
