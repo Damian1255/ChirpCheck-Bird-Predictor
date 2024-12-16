@@ -31,47 +31,46 @@ body {
 
 .search-container p {
   color: grey;
-  margin-bottom: 13px;
+  margin-bottom: 15px;
   padding: 0px 25px;
 }
 
 .search-container textarea {
   width: 100%;
   padding: 10px;
-  border-radius: 5px;
   border: 1.5px solid #d9d9d9;
-  background-color: #f0f0f0;
-  height: 160px;
+  background-color: #f1f1f1;
+  height: 170px;
   resize: none;
-  border-radius: 25px;
-  padding: 12px 20px;
+  border-radius: 10px;
+  padding: 15px 20px;
   font-size: 18px;
   margin: 20px 0px;
+  margin-bottom: 10px;
   transition: all 0.3s ease;
 }
 
 .search-container textarea::placeholder {
-  font-family: Caveat Brush;
-  font-size: 18px;
+  font-size: 16px;
 }
 
 .search-container textarea:focus {
-  background-color: #e5e5e5;
+  background-color: #ecebeb;
   outline: none;
-  box-shadow: 0 0 10px 0 rgba(0, 0, 0, 0.3)
+  box-shadow: 0 0 10px 0 rgba(0, 0, 0, 0.066) inset;
 }
 
 .search-container textarea:hover {
-  background-color: #e5e5e5;
+  background-color: #ecebeb;
 }
 
 .search-container input[type="button"] {
   padding: 10px 0px;
   border-radius: 5px;
   border: none;
-  background-color: #9A896D;
+  background-color: #866939;
   cursor: pointer;
-  border-radius: 25px;
+  border-radius: 10px;
   width: 100%;
   transition: all 0.3s ease;
   color: white;
@@ -80,7 +79,7 @@ body {
 }
 
 .search-container input[type="button"]:hover {
-  background-color: #7d6b4d;
+  background-color: #5f4a28
 }
 
 .search-container input[type="button"]:disabled {
@@ -108,8 +107,8 @@ body {
   padding: 30px;
   background-color: white;
   width: 80%;
-  border-radius: 25px;
-  box-shadow: 0 0 20px 0 rgba(0, 0, 0, 0.3);
+  border-radius: 15px;
+  box-shadow: 0 0 40px 0 rgba(0, 0, 0, 0.1);
 }
 
 .result-board .display-name img {
@@ -137,8 +136,7 @@ body {
 }
 
 .result-board .display-name div button {
-  padding: 5px 50px;
-  border-radius: 5px;
+  padding: 5px 30px;
   border: none;
   background-color: #e6e6e6;
   cursor: pointer;
@@ -146,7 +144,7 @@ body {
   transition: all 0.3s ease;
   font-family: Annie Use Your Telescope;
   font-weight: bold;
-  font-size: 22px;
+  font-size: 18px;
   letter-spacing: 2px;
 }
 
@@ -212,7 +210,7 @@ body {
   position: absolute;
   text-align: center;
   padding: 20px;
-  width: 70%;
+  width: 72%;
 }
 
 .credits {  
@@ -221,7 +219,7 @@ body {
   right: 0;
   padding: 0px 40px;
   font-size: 14px;
-  color: gray;
+  color: rgb(94, 94, 94);
 }
 
 /* Responsive */

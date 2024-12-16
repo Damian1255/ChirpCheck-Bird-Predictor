@@ -19,12 +19,12 @@
                 <div>
                     <img src="{{url_for('static',filename='images/logo.png')}}" alt="logo" width="150px">
                     <h1>ChirpCheck</h1>
-                    <p>Your bird identification assistant, powered by AI.</p>
+                    <p>Your bird identification assistant, powered by ML.</p>
                     <form>
-                        <textarea name="text" placeholder="Enter Bird description (e.g. small bird with yellow body)"
+                        <textarea name="text" placeholder="Enter description of a bird here..."
                             id="description"></textarea>
                         <br>
-                        <input type="button" value="Chirp It!" id="submit_btn" disabled>
+                        <input type="button" value="Identify!" id="submit_btn" disabled>
                         <p id="message">-</p>
                     </form>
                 </div>
@@ -72,11 +72,15 @@
                 <div id="init">
                     <h1 style="font-family: Lilita One;">To get started,</h1>
                     <span style="color: grey;">
-                        Enter a description of a bird in the text box and hit the button, we will try to identify it for you.
-                        <br><br>
-                        <span style="color: black; font-weight: 500; font-size: 18px;">Some examples:</span>
-                        <br>"Small bird with yellow body"<br>"Bird with white body and long legs"<br>"Bird with blue
-                        and white feathers"
+                        <span style="color: black;">
+                            Enter a description of a bird in the text box and click the "Identify!" button and we will try to identify it for you.
+                        </span>
+                        <br><br><br>
+                        <span style="color: black; font-weight: 500; font-size: 16px;">Try some examples:</span>
+                        <br>
+                        "Small bird with yellow body, black wings and long tail",<br>
+                        "A white body bird with long legs, and large wings"<br>
+                        "Noisy bird with blue and white body with a long head"<br>
                     </span>
                 </div>
             </div>
